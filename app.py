@@ -22,8 +22,8 @@ def churn_prediction(input_data):
     return prediction.item()
 
 def main():
-    st.title("Customer Churn Prediction")
-    st.header("Find about to churn customers and retain them")
+    st.title(":orange[Customer Churn Prediction]")
+    st.header(":violet[Find about to churn customers and retain them]")
 
     age=st.number_input("Age of Person",min_value=1.0,max_value=100.0,format="%.2f")
     if age > 100:
