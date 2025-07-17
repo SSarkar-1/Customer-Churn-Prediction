@@ -3,7 +3,7 @@ import numpy as np
 import pickle 
 import pandas as pd
 
-with open('Model_pipeline','rb') as f:
+with open('C:/Users/SHUBHAM SARKAR/Desktop/ML Algorithms/Customer Churn Prediction/Customer-Churn-Prediction/Model_pipeline','rb') as f:
     loaded_pipeline=pickle.load(f)
 
 def churn_prediction(input_data):
