@@ -25,7 +25,7 @@ def main():
     st.title(":orange[Customer Churn Prediction]")
     st.header(":violet[Find about to churn customers and retain them]")
 
-    age=st.number_input("Age of Person",min_value=1.0,max_value=100.0,format="%.2f")
+    age=st.number_input("Age of Person",min_value=1.0,max_value=100.0,step=1.0,format="%.2f")
     if age > 100:
         st.warning("Age cannot be more than 100!")
     if age < 1:
@@ -43,23 +43,23 @@ def main():
 
     medium_of_operation=st.selectbox("Medium of Operation",['Desktop','Smartphone','Both'])
 
-    days_since_last_login=st.number_input("Days Since Last Login",min_value=0.0,format="%.2f")
+    days_since_last_login=st.number_input("Days Since Last Login",min_value=0.0,step=1.0,format="%.2f")
     if days_since_last_login < 0:
         st.warning("Days Since Last Login cannot be less than 0!")
 
-    avg_time_spent=st.number_input("Average Time Spent",min_value=0.0,format="%.2f")
+    avg_time_spent=st.number_input("Average Time Spent",min_value=0.0,step=1.0,format="%.2f")
     if avg_time_spent < 0:
         st.warning("Average Time Spent cannot be less than 0!")
     
-    avg_transaction_value=st.number_input("Average Transaction Value",min_value=0.0,format="%.2f")
+    avg_transaction_value=st.number_input("Average Transaction Value",min_value=0.0,step=1.0,format="%.2f")
     if avg_transaction_value < 0:
         st.warning("Average Transaction Value cannot be less than 0!")
 
-    avg_frequency_login_days=st.number_input("Average Frequency Login Days",min_value=0.0,format="%.2f")
+    avg_frequency_login_days=st.number_input("Average Frequency Login Days",min_value=0.0,step=1.0,format="%.2f")
     if avg_frequency_login_days < 0:
         st.warning("Average Frequency Login Days cannot be less than 0!")
     
-    points_in_wallet=st.number_input("Points in Wallet",format="%.2f")
+    points_in_wallet=st.number_input("Points in Wallet",step=1.0,format="%.2f")
 
     used_special_discount=st.selectbox("Used Special Discount?",['Yes','No'])
 
