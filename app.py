@@ -1,10 +1,10 @@
 import streamlit as st
 import numpy as np
-import pickle 
+import joblib 
 import pandas as pd
 
-with open('Model_pipeline','rb') as f:
-    loaded_pipeline=pickle.load(f)
+loaded_pipeline = joblib.load('Model_pipeline.joblib')
+
 
 def churn_prediction(input_data):
     feature_names=['age', 'gender',
