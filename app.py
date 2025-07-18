@@ -3,7 +3,7 @@ import numpy as np
 import joblib 
 import pandas as pd
 
-loaded_pipeline = joblib.load('Model_pipeline.joblib')
+loaded_pipeline = joblib.load('Model_pipeline')
 
 
 def churn_prediction(input_data):
