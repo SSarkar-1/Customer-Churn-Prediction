@@ -97,9 +97,10 @@ def main():
         4: "High Risk",
         5: "Very High Risk"
     }
-    st.metric(label=f"Score {prediction}", value=color_map[prediction])
-    st.success(f"Predicted Risk Score: {prediction} → {labels[prediction]}")
-    #st.success(prediction)
+    if prediction>0:
+        st.metric(label=f"Score {prediction}", value=color_map[prediction])
+        st.success(f"Predicted Risk Score: {prediction} → {labels[prediction]}")
+        #st.success(prediction)
 
 if __name__=='__main__':
     main()
